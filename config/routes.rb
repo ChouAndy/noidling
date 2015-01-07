@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'laws' => 'laws#index', as: :laws
 
   get 'knowledges' => 'knowledges#index', as: :knowledges
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
     resources :news
     resources :knowledges
     resources :laws
+    resources :counters, only: [:index, :edit, :update]
   end
 
   get 'login' => 'user_sessions#new', as: :login

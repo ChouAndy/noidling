@@ -13,3 +13,6 @@ zh-TW:
         site_url: '法規連結'
         word_url: 'Word 檔連結'
         pdf_url: 'PDF 檔連結'
+      admin_counter:
+        category: '類別'
+        number: '目前瀏覽人數'

@@ -12,3 +12,6 @@
     ul
       - good_sites.each do |good_site|
         li = link_to image_tag(good_site[:path], alt: good_site[:alt], width: '107px', heigh: '46px'), good_site[:url], target: '_blank'
+  .counters
+    p 瀏覽人數
+    = show_counters(@counters)

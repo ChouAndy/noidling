@@ -1,0 +1,17 @@
+= render 'shared/admin_menus'
+.admin
+  .counters_list
+    .title
+    .inner
+      table
+        tr
+          th 類別
+          th 目前瀏覽人數
+          th width="70" 功能
+        - @admin_counters.each do |admin_counter|
+          tr
+            td = admin_counter.category
+            td = admin_counter.number
+            td
+              = link_to image_tag('buttons/edit.png'), edit_admin_counter_path(admin_counter), class: 'action'
+    .footer_line

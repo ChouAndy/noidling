@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150107071716) do
+ActiveRecord::Schema.define(version: 20150107132957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admin_counters", force: :cascade do |t|
+    t.integer  "category"
+    t.integer  "number",     default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "admin_knowledges", force: :cascade do |t|
     t.string   "question"
