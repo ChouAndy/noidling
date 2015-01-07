@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   def index
-    @news = Admin::News.order('public_date DESC').page(params[:page]).per(5)
+    @news = Admin::News.order('public_date DESC').page(params[:page]).per(10)
   end
 
   def show
