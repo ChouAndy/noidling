@@ -1,0 +1,17 @@
+- admin_menus = Array.new
+- admin_menus << { text: '【最新消息】管理', url: admin_news_index_path, role: 'news' }
+- admin_menus << { text: '【相關知識】管理', url: root_path, role: 'knowledge' }
+- admin_menus << { text: '【相關法規】管理', url: root_path, role: 'laws' }
+- admin_menus << { text: '【活動花絮】管理', url: root_path, role: 'activities' }
+- admin_menus << { text: '【資料下載】管理', url: root_path, role: 'downloads' }
+- admin_menus << { text: '【跑馬燈】管理', url: root_path, role: 'scrollers' }
+- admin_menus << { text: '【計數器】管理', url: root_path, role: 'counters' }
+
+.admin_menus
+  .title = image_tag 'titles/admin_menus_title.png'
+  ul
+    - admin_menus.each do |admin_menu|
+      li role="admin/#{admin_menu[:role]}" = link_to admin_menu[:text], admin_menu[:url]
+  javascript:
+    $('.admin_menus li.active').removeClass('active');
+    $('.admin_menus li[role="#{params['controller']}"]').addClass('active');

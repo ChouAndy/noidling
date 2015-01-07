@@ -1,0 +1,45 @@
+doctype 5
+html lang="zh_TW"
+  head
+    title 新竹市環境保護局 空氣污染及噪音防制科 停車怠速熄火宣導網站
+    meta name="keywords" content="新竹市,環保局,新竹市環境保護局,空氣污染及噪音防制科,停車,怠速,熄火,宣導網站"
+    meta charset="utf-8"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    = favicon_link_tag 'favicon.ico'
+    = stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css',
+                          '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css',
+                          'application'
+    = javascript_include_tag 'application'
+    = javascript_include_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js'
+    = csrf_meta_tags
+  body
+    .page
+      header.clearfix
+        .logo.pull-left
+          = link_to image_tag('html/logo.png'), root_path
+        .admin-bar.pull-right
+          - if current_user
+            .logout_link = link_to '', logout_path, method: :delete
+            .admin_home_link = link_to '', users_path
+            .login_text 您好～系統管理員！
+          - else
+            .login_link = link_to '', login_path
+            .login_text 您好～訪客！
+        .tabs.pull-right
+          ul
+            li.home role="welcome" = link_to '', root_path
+            li.news role="news" = link_to '', root_path
+            li.knowledge role="knowledge" = link_to '', root_path
+            li.laws role="laws" = link_to '', root_path
+            li.activities role="activities" = link_to '', root_path
+            li.downloads role="downloads" = link_to '', root_path
+          javascript:
+            $('.tabs li.active').removeClass('active');
+            $('.tabs li[role="#{params['controller']}"]').addClass('active');
+      == yield
+      .clearfix
+      footer
+        .text
+          p 版權所有 新竹市環境保護局 &copy; 2012 Bureau of Environmental Protection Hsin-Chu. All Rights Reserved.
+          p Design by 金石山工程顧問股份有限公司 ( G.S.S Engineering Consultants Co., Ltd. )

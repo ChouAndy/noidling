@@ -1,0 +1,5 @@
+= form_tag login_path, method: :post do
+  = text_field_tag :username, nil, placeholder: '帳號: demo'
+  = password_field_tag :password, nil, placeholder: '密碼: demo'
+  button.button type="submit" name="submit" value="submit"
+    = image_tag 'buttons/login.png'

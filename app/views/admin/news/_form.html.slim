@@ -1,0 +1,6 @@
+= bootstrap_form_for [:admin, @news], layout: :horizontal do |f|
+  = f.date_select :public_date
+  = f.text_field :title
+  = f.text_area :content, rows: '7'
+  = f.form_group do
+    = f.primary t(:submit)

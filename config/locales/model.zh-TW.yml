@@ -1,0 +1,7 @@
+zh-TW:
+  helpers:
+    label:
+      news:
+        public_date: '發布日期'
+        title: '標題'
+        content: '內容'
