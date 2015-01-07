@@ -329,8 +329,8 @@ footer {
 .news .inner .list p { margin:0; padding:0; line-height:27px; }
 .news .inner .list span.date { padding-left:25px; background:image_url('icons/news_16.png') no-repeat; color:gray; background-position:left 1px; color:#666666; }
 .news .inner .list span.click { color:#FF6D00; }
-.news .inner .list a { color:green; font-weight:normal; }
-.news .inner .list a:hover { color:red; }
+.news .inner .list p a { color:green; font-weight:normal; }
+.news .inner .list p a:hover { color:red; }
 .news .inner .view { margin:15px 0; text-align:left; padding:0 15px; width:780px; }
 .news .inner .view div { margin-bottom:10px; color:#666666; }
 .news .inner .view label { color:#028CB8; }
