@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'laws' => 'laws#index', as: :laws
+
   get 'knowledges' => 'knowledges#index', as: :knowledges
   get 'knowledges/:id' => 'knowledges#show', as: :knowledge
 

@@ -1,0 +1,15 @@
+= render 'shared/good_sites'
+.content
+  .laws
+    .title
+    .inner
+      .list
+        - if @laws.empty?
+          .center 目前尚無任何相關法規
+        - else
+          - @laws.each do |law|
+            div
+              label = link_to law.name, law.site_url, target: '_blank'
+              =' link_to image_tag('icons/word_16.png'), law.word_url, target: '_blank'
+              = link_to image_tag('icons/pdf_16.png'), law.pdf_url, target: '_blank'
+    .footer_line
