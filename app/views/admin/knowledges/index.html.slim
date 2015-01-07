@@ -1,0 +1,19 @@
+= render 'shared/admin_menus'
+.admin
+  .knowledge_list
+    .title.text-right
+      = link_to image_tag('buttons/add.png'), new_admin_knowledge_path , class: 'button'
+    .inner
+      table
+        tr
+          th 問題
+          th width="70" 功能
+        - @admin_knowledges.each do |admin_knowledge|
+          tr
+            td = admin_knowledge.question
+            td
+              = link_to image_tag('buttons/view.png'), admin_knowledge, class: 'action'
+              = link_to image_tag('buttons/edit.png'), edit_admin_knowledge_path(admin_knowledge), class: 'action'
+              = link_to image_tag('buttons/del.png'), admin_knowledge, class: 'action', method: 'delete', data: {confirm: t(:are_you_sure)}
+      = paginate @admin_knowledges
+    .footer_line

@@ -6,10 +6,10 @@
       .view
         div
           label 日期：
-          = @news.public_date
+          = @admin_news.public_date
         div
           label 標題：
-          = @news.title
+          = @admin_news.title
         .line
-        div = markdown @news.content
+        div = markdown @admin_news.content
     .footer_line

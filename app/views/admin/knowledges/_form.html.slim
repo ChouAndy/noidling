@@ -1,0 +1,5 @@
+= bootstrap_form_for @admin_knowledge, layout: :horizontal do |f|
+  = f.text_field :question
+  = f.text_area :answer, rows: '7'
+  = f.form_group do
+    = f.primary t(:submit)

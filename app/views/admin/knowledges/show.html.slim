@@ -1,0 +1,9 @@
+= render 'shared/admin_menus'
+.admin
+  .knowledge_view
+    .title
+    .inner
+      .view
+        .question = @admin_knowledge.question
+        .answer = markdown @admin_knowledge.answer
+    .footer_line

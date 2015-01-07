@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
+  namespace :admin do
+    resources :news
+    resources :knowledges
+  end
 
   get 'login' => 'user_sessions#new', as: :login
   post 'login' => 'user_sessions#create'
@@ -10,7 +13,5 @@ Rails.application.routes.draw do
     get 'users' => 'users#index', as: :users
   end
 
-  namespace :admin do
-    resources :news
-  end
+  root 'welcome#index'
 end

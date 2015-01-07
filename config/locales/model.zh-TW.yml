@@ -1,7 +1,10 @@
 zh-TW:
   helpers:
     label:
-      news:
+      admin_news:
         public_date: '發布日期'
         title: '標題'
         content: '內容'
+      admin_knowledge:
+        question: '問題'
+        answer: '答案'

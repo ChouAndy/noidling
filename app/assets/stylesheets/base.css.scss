@@ -321,6 +321,33 @@ footer {
 .admin .news_edit .inner { padding-top: 20px; }
 .admin .news_edit .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
 
+/* knowledge */
+.admin .knowledge_list { margin-top:5px; }
+.admin .knowledge_list .title { height:37px; margin-bottom:5px; background:image_url('titles/knowledge_list_title.png') no-repeat; background-position:center top; }
+.admin .knowledge_list .inner { min-height:30px; padding:0 0 8px 0; color:#666666; }
+.admin .knowledge_list .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .knowledge_view { margin-top:5px; }
+.admin .knowledge_view .title { height:37px; margin-bottom:5px; background:image_url('titles/knowledge_view_title.png') no-repeat; background-position:center top; }
+.admin .knowledge_view .inner { min-height:30px; }
+.admin .knowledge_view .view { margin:15px 0; padding:0 15px; width:725px; }
+.admin .knowledge_view .view div { margin:10px 0; color:#666666; }
+.admin .knowledge_view .view label { color:#028CB8; }
+.admin .knowledge_view .view .question { padding-left:25px; background:image_url('icons/question_16.png') no-repeat; color:#349393; background-position:left 1px; font-weight:bold; }
+.admin .knowledge_view .view .answer { padding-left:25px; background:image_url('icons/answer_16.png') no-repeat; color:#F5B604; background-position:left 1px; }
+.admin .knowledge_view .view pre { width:100%; white-space:pre-wrap; }
+.admin .knowledge_view .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .knowledge_add { margin-top:5px; }
+.admin .knowledge_add .title { height:37px; margin-bottom:5px; background:image_url('titles/knowledge_add_title.png') no-repeat; background-position:center top; }
+.admin .knowledge_add .inner { padding-top: 20px; }
+.admin .knowledge_add .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .knowledge_edit { margin-top:5px; }
+.admin .knowledge_edit .title { height:37px; margin-bottom:5px; background:image_url('titles/knowledge_edit_title.png') no-repeat; background-position:center top; }
+.admin .knowledge_edit .inner { padding-top: 20px; }
+.admin .knowledge_edit .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
 /* for select */
 select.form-control {
   width: auto;
