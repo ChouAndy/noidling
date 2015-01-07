@@ -1,0 +1,7 @@
+= bootstrap_form_for @admin_law, layout: :horizontal do |f|
+  = f.text_field :name
+  = f.url_field :site_url
+  = f.url_field :word_url
+  = f.url_field :pdf_url
+  = f.form_group do
+    = f.primary t(:submit)

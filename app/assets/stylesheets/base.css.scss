@@ -1,3 +1,8 @@
+label.required:after {
+  color: red;
+  content:" *";
+}
+
 .page {
   width: 1000px;
   margin: 0 auto;
@@ -347,6 +352,33 @@ footer {
 .admin .knowledge_edit .title { height:37px; margin-bottom:5px; background:image_url('titles/knowledge_edit_title.png') no-repeat; background-position:center top; }
 .admin .knowledge_edit .inner { padding-top: 20px; }
 .admin .knowledge_edit .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+/* laws */
+.admin .laws_list { margin-top:5px; }
+.admin .laws_list .title { height:37px; margin-bottom:5px; background:image_url('titles/laws_list_title.png') no-repeat; background-position:center top; }
+.admin .laws_list .inner { min-height:30px; padding:0 0 8px 0; color:#666666; }
+.admin .laws_list .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .law_view { margin-top:5px; }
+.admin .law_view .title { height:37px; margin-bottom:5px; background:image_url('titles/law_view_title.png') no-repeat; background-position:center top; }
+.admin .law_view .inner { min-height:30px; }
+.admin .law_view .view { margin:15px 0; padding:0 15px; width:750px; }
+.admin .law_view .view div { margin:10px 0; color:#666666; }
+.admin .law_view .view label { color:#028CB8; }
+.admin .law_view .view a { font-weight:normal; color:blue; }
+.admin .law_view .view a:hover { color:red; }
+.admin .law_view .view img { vertical-align:-4px; }
+.admin .law_view .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .law_add { margin-top:5px; }
+.admin .law_add .title { height:37px; margin-bottom:5px; background:image_url('titles/law_add_title.png') no-repeat; background-position:center top; }
+.admin .law_add .inner { padding-top: 20px; }
+.admin .law_add .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .law_edit { margin-top:5px; }
+.admin .law_edit .title { height:37px; margin-bottom:5px; background:image_url('titles/law_edit_title.png') no-repeat; background-position:center top; }
+.admin .law_edit .inner { padding-top: 20px; }
+.admin .law_edit .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
 
 /* for select */
 select.form-control {

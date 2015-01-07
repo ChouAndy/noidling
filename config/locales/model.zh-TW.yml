@@ -8,3 +8,8 @@ zh-TW:
       admin_knowledge:
         question: '問題'
         answer: '答案'
+      admin_law:
+        name: '法規名稱'
+        site_url: '法規連結'
+        word_url: 'Word 檔連結'
+        pdf_url: 'PDF 檔連結'

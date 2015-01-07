@@ -1,0 +1,17 @@
+= render 'shared/admin_menus'
+.admin
+  .law_view
+    .title
+    .inner
+      .view
+        div
+          label 法規名稱：
+          = @admin_law.name
+        div
+          label 法規連結：
+          = link_to @admin_law.site_url, @admin_law.site_url, target: '_blank'
+        div
+          label 檔案連結：
+          =' link_to image_tag('icons/word_16.png'), @admin_law.word_url, target: '_blank'
+          = link_to image_tag('icons/pdf_16.png'), @admin_law.pdf_url, target: '_blank'
+    .footer_line

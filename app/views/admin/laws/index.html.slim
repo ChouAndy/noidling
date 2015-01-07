@@ -1,0 +1,19 @@
+= render 'shared/admin_menus'
+.admin
+  .knowledge_list
+    .title.text-right
+      = link_to image_tag('buttons/add.png'), new_admin_law_path , class: 'button'
+    .inner
+      table
+        tr
+          th 法規名稱
+          th width="70" 功能
+        - @admin_laws.each do |admin_law|
+          tr
+            td = admin_law.name
+            td
+              = link_to image_tag('buttons/view.png'), admin_law, class: 'action'
+              = link_to image_tag('buttons/edit.png'), edit_admin_law_path(admin_law), class: 'action'
+              = link_to image_tag('buttons/del.png'), admin_law, class: 'action', method: 'delete', data: {confirm: t(:are_you_sure)}
+      = paginate @admin_laws
+    .footer_line
