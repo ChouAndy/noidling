@@ -1,0 +1,13 @@
+= render 'shared/good_sites'
+.content
+  .knowledge
+    .title
+    .inner
+      .list
+        - if @knowledges.empty?
+          .center 目前尚無任何相關知識
+        - else
+          - @knowledges.each do |knowledge|
+            .question
+              = link_to knowledge.question, knowledge_path(knowledge)
+    .footer_line

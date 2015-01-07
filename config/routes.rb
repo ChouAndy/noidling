@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'knowledges' => 'knowledges#index', as: :knowledges
+  get 'knowledges/:id' => 'knowledges#show', as: :knowledge
+
   get 'news' => 'news#index', as: :news_index
   get 'news/:id' => 'news#show', as: :news
 

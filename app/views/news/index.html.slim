@@ -13,4 +13,5 @@
               span.date = '[ ' + news.public_date.to_s + ' ]　'
               span.click = '[ 點閱：' + news.click.to_s + ' ]　'
               = link_to news.title, news_path(news)
+          = paginate @news
     .footer_line

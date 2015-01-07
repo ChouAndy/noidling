@@ -333,6 +333,21 @@ footer {
 .news .inner .view pre { width:100%; white-space:pre-wrap; }
 .news .footer_line { margin-top:5px; height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
 
+/* knowledge */
+.knowledge { margin-top:5px; }
+.knowledge .title { height:37px; margin-bottom:20px; background:image_url('titles/knowledge_title.png') no-repeat; background-position:center top; }
+.knowledge .inner .question { padding-left:25px; background:image_url('icons/question_16.png') no-repeat; color:#349393; background-position:left 1px; font-weight:bold; }
+.knowledge .inner .answer { padding-left:25px; background:image_url('icons/answer_16.png') no-repeat; color:#DB7714; background-position:left 1px; margin-top: 10px; }
+.knowledge .inner { min-height:30px; margin:10px 0; }
+.knowledge .inner .list { padding:0 15px; width:780px; }
+.knowledge .inner .list div { margin:10px 0; }
+.knowledge .inner .list a { color:#349393; font-weight:bold; }
+.knowledge .inner .list a:hover { color:red; }
+.knowledge .inner .view { margin:15px 0; padding:0 15px; width:780px; }
+.knowledge .inner .view label { color:#028CB8; }
+.knowledge .inner .view pre { width:100%; white-space:pre-wrap; }
+.knowledge .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
 /* news */
 .admin .news_list { margin-top:5px; }
 .admin .news_list .title { height:37px; margin-bottom:5px; background:image_url('titles/news_list_title.png') no-repeat; background-position:center top; }
