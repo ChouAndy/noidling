@@ -301,6 +301,38 @@ footer {
   }
 }
 
+.ltside { width:200px; float:left; }
+
+.content {
+  width: 780px;
+  float: left;
+  margin-left: 20px;
+}
+
+/* good sites link */
+.good_sites_link { margin:0; height:410px; background:image_url('good_sites/good_sites_bg.png') no-repeat; background-position:20px top; }
+.good_sites_link .title { padding:50px 0 10px 42px; }
+.good_sites_link ul { list-style:none; padding:0; margin:0 0 0 50px; }
+.good_sites_link ul li { padding:0; margin:0 0 4px 0; font-size:10pt; }
+.good_sites_link ul li a img { padding:0; margin:0; border:1px solid blue; }
+.good_sites_link ul li a img:hover { border:1px solid red; }
+
+/* news */
+.news { margin-top:5px; }
+.news .title { height:37px; margin-bottom:5px; background:image_url('titles/news_title.png') no-repeat; background-position:center top; }
+.news .inner { min-height:30px; margin:5px 0; }
+.news .inner .list { padding:0 15px; width:750px; }
+.news .inner .list p { margin:0; padding:0; line-height:27px; }
+.news .inner .list span.date { padding-left:25px; background:image_url('icons/news_16.png') no-repeat; color:gray; background-position:left 1px; color:#666666; }
+.news .inner .list span.click { color:#FF6D00; }
+.news .inner .list a { color:green; font-weight:normal; }
+.news .inner .list a:hover { color:red; }
+.news .inner .view { margin:15px 0; text-align:left; padding:0 15px; width:780px; }
+.news .inner .view div { margin-bottom:10px; color:#666666; }
+.news .inner .view label { color:#028CB8; }
+.news .inner .view pre { width:100%; white-space:pre-wrap; }
+.news .footer_line { margin-top:5px; height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
 /* news */
 .admin .news_list { margin-top:5px; }
 .admin .news_list .title { height:37px; margin-bottom:5px; background:image_url('titles/news_list_title.png') no-repeat; background-position:center top; }
@@ -393,3 +425,38 @@ select.form-control {
 
 /* other */
 .line { border-top:1px dashed #caceca; padding:0; margin:10px 0; }
+
+/* color */
+.red { color:red; }
+
+/* common */
+p.clr, .clr { clear:both; background:none; }
+li.bg, .bg { clear:both; padding:0; margin:5px 0; background:none; }
+.border { border:1px solid red; }
+
+/* bow */
+.bow01_l { position:absolute; margin:0; z-index:5; top:40px; left:10px; }
+.bow01_r { position:absolute; margin:0; z-index:5; top:40px; right:10px; }
+.bow02_l { position:absolute; margin:0; z-index:5; top:73%; left:10px; }
+.bow02_r { position:absolute; margin:0; z-index:5; top:73%; right:10px; }
+
+/*** ALIGN ***/
+.center { text-align:center; }
+.left { text-align:left; }
+.right { text-align:right; }
+.top { text-align:top; }
+.vtop { vertical-align:top; }
+
+/*** FONT ***/
+.b { font-weight: bold; }
+
+/*** DISPLAY ***/
+.none { display:none; }
+.block { display:block; }
+
+/*** COLOR ***/
+.red { color: red; }
+.blue { color: blue; }
+.yellow { color: yellow; }
+.navy { color: navy; }
+.green { color: green; }

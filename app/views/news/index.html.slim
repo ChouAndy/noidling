@@ -1,0 +1,16 @@
+= render 'shared/good_sites'
+.content
+  .news
+    .title
+    .inner
+      .list
+        - if @news.empty?
+          .center
+            p 目前尚無任何最新消息
+        - else
+          - @news.each do |news|
+            p
+              span.date = '[ ' + news.public_date.to_s + ' ]　'
+              span.click = '[ 點閱：' + news.click.to_s + ' ]　'
+              = link_to news.title, news_path(news)
+    .footer_line

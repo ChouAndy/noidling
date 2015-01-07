@@ -1,0 +1,14 @@
+- good_sites = []
+- good_sites << { path: 'good_sites/001.png', alt: '新竹市環境保護局首頁', url: 'http://www.hccepb.gov.tw/' }
+- good_sites << { path: 'good_sites/002.png', alt: '清淨家園顧厝邊綠色生活網', url: 'http://ecolife.epa.gov.tw/' }
+- good_sites << { path: 'good_sites/003.png', alt: '環保低碳活動平台', url: 'http://greenevent.epa.gov.tw/' }
+- good_sites << { path: 'good_sites/004.png', alt: '新竹市環境保護局電動機車輔助', url: 'http://air.hccepb.gov.tw/Activity' }
+- good_sites << { path: 'good_sites/005.png', alt: '節能減碳部落格', url: 'http://www.wretch.cc/blog/hccepbw' }
+- good_sites << { path: 'good_sites/006.png', alt: '新竹市環境保護局省電大作戰', url: 'http://air.hccepb.gov.tw/spactivity/' }
+
+.ltside
+  .good_sites_link
+    .title = image_tag 'titles/good_sites_title.png'
+    ul
+      - good_sites.each do |good_site|
+        li = link_to image_tag(good_site[:path], alt: good_site[:alt], width: '107px', heigh: '46px'), good_site[:url], target: '_blank'

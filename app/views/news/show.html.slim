@@ -1,0 +1,15 @@
+= render 'shared/good_sites'
+.content
+  .news
+    .title
+    .inner
+      .view
+        div
+          label 日期：
+          = @news.public_date
+        div
+          label 標題：
+          = @news.title
+        .line
+        div = markdown @news.content
+    .footer_line

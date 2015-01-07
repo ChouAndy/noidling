@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'news' => 'news#index', as: :news_index
+  get 'news/:id' => 'news#show', as: :news
+
   namespace :admin do
     resources :news
     resources :knowledges
