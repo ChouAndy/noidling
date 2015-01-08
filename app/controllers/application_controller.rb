@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :set_counters
+  before_filter :set_counters, :set_marquees
 
   protected
 
@@ -13,5 +13,9 @@ class ApplicationController < ActionController::Base
       @counters.number += 1
       @counters.save
     end
+  end
+
+  def set_marquees
+    @marquees = Admin::Marquee.all
   end
 end

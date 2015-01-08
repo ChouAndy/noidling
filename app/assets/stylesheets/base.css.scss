@@ -321,6 +321,10 @@ footer {
 .counters { margin:0 0 0 23px; width:159px; height:70px; text-align:center; border:2px solid #dedede; border-radius:15px; -moz-border-radius:15px; -webkit-border-radius:15px; }
 .counters p { font-size:10pt; color:#008DD7; margin: 5px 0; }
 
+/* marquee */
+.horizontal_scroller { position:relative; width:780px; overflow:hidden; height:18px; }
+.scrollingtext{ position:absolute; white-space:nowrap; font-size:12pt; color:red; }
+
 /* news */
 .news { margin-top:5px; }
 .news .title { height:37px; margin-bottom:5px; background:image_url('titles/news_title.png') no-repeat; background-position:center top; }
@@ -487,6 +491,34 @@ footer {
 .admin .downloads_edit .title { height:37px; margin-bottom:5px; background:image_url('titles/downloads_edit_title.png') no-repeat; background-position:center top; }
 .admin .downloads_edit .inner { padding-top: 20px; }
 .admin .downloads_edit .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+/* scrollers */
+.admin .marquees_list { margin-top:5px; }
+.admin .marquees_list .title { height:37px; margin-bottom:5px; background:image_url('titles/scrollers_list_title.png') no-repeat; background-position:center top; }
+.admin .marquees_list .inner { min-height:30px; padding:0 0 8px 0; color:#666666; }
+.admin .marquees_list .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .marquees_view { margin-top:5px; }
+.admin .marquees_view .title { height:37px; margin-bottom:5px; background:image_url('titles/scrollers_view_title.png') no-repeat; background-position:center top; }
+.admin .marquees_view .inner { min-height:30px; margin-top: 20px; }
+.admin .marquees_view .view { margin:15px 0; padding:0 15px; width:750px; }
+.admin .marquees_view .view div { margin:10px 0; color:#666666; }
+.admin .marquees_view .view label { color:#028CB8; }
+.admin .marquees_view .view a { font-weight:normal; color:blue; }
+.admin .marquees_view .view a:hover { color:red; }
+.admin .marquees_view .view img { vertical-align:-4px; }
+.admin .marquees_view .view .text { width:654px; text-indent:-96px; margin-left:96px; }
+.admin .marquees_view .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .marquees_add { margin-top:5px; }
+.admin .marquees_add .title { height:37px; margin-bottom:5px; background:image_url('titles/scrollers_add_title.png') no-repeat; background-position:center top; }
+.admin .marquees_add .inner { padding-top: 20px; }
+.admin .marquees_add .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .marquees_edit { margin-top:5px; }
+.admin .marquees_edit .title { height:37px; margin-bottom:5px; background:image_url('titles/scrollers_edit_title.png') no-repeat; background-position:center top; }
+.admin .marquees_edit .inner { padding-top: 20px; }
+.admin .marquees_edit .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
 
 /* counters */
 .admin .counters_list { margin-top:5px; }

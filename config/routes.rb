@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :knowledges
     resources :laws
     resources :downloads
+    resources :marquees
     resources :counters, only: [:index, :edit, :update]
   end
 

@@ -1,0 +1,18 @@
+= render 'shared/admin_menus'
+.admin
+  .marquees_list
+    .title.text-right
+      = link_to image_tag('buttons/add.png'), new_admin_marquee_path , class: 'button'
+    .inner
+      table
+        tr
+          th 跑馬燈內容
+          th width="70" 功能
+        - @admin_marquees.each do |admin_marquee|
+          tr
+            td = admin_marquee.text
+            td
+              = link_to image_tag('buttons/view.png'), admin_marquee, class: 'action'
+              = link_to image_tag('buttons/edit.png'), edit_admin_marquee_path(admin_marquee), class: 'action'
+              = link_to image_tag('buttons/del.png'), admin_marquee, class: 'action', method: 'delete', data: {confirm: t(:are_you_sure)}
+    .footer_line

@@ -23,3 +23,5 @@ zh-TW:
         url: '檔案連結'
         url_file_size: '檔案大小'
         url_file_size_unit: '大小單位'
+      admin_marquee:
+        text: '跑馬燈內容'
