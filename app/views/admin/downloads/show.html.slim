@@ -1,0 +1,40 @@
+= render 'shared/admin_menus'
+.admin
+  .downloads_view
+    .title
+    .inner
+      .view.clearfix
+        .file_info
+          div
+            label 檔案類別：
+            = @admin_download.category
+          div
+            label 檔案描述：
+            = @admin_download.title
+          - if @admin_download.download_type == 0
+            div
+              label 檔案格式：
+              = @admin_download.upload_file_name.split('.').last
+            div
+              label 檔案大小：
+              = number_to_human_size(@admin_download.upload_file_size)
+            div
+              label 檔案連結：
+              = link_to image_tag('icons/download_16.png'), @admin_download.upload.url, target: '_blank'
+          - else
+            div
+              label 檔案格式：
+              = @admin_download.url_file_name.split('.').last
+            div
+              label 檔案大小：
+              =  "#{@admin_download.url_file_size} #{@admin_download.url_file_size_unit}"
+            div
+              label 檔案連結：
+              = link_to image_tag('icons/download_16.png'), @admin_download.url, target: '_blank'
+        - if @admin_download.upload_content_type =~ /\Aimage\/.*\Z/
+          .image_area
+            = image_tag @admin_download.upload.url(:medium)
+        - if @admin_download.url_file_content_type =~ /\Aimage\/.*\Z/
+          .image_area
+            = image_tag @admin_download.url, width: '300px'
+    .footer_line

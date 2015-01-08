@@ -1,0 +1,29 @@
+= render 'shared/admin_menus'
+.admin
+  .downloads_list
+    .title.text-right
+      = link_to image_tag('buttons/add.png'), new_admin_download_path , class: 'button'
+    .inner
+      table
+        tr
+          th width="80" 類別
+          th 描述
+          th width="60" 格式
+          th width="100" 檔案大小
+          th width="70" 功能
+        - @admin_downloads.each do |admin_download|
+          tr
+            td = admin_download.category
+            td = admin_download.title
+            - if admin_download.download_type == 0
+              td = admin_download.upload_file_name.split('.').last
+              td = number_to_human_size(admin_download.upload_file_size)
+            - else
+              td = admin_download.url_file_name.split('.').last
+              td = "#{admin_download.url_file_size} #{admin_download.url_file_size_unit}"
+            td
+              = link_to image_tag('buttons/view.png'), admin_download, class: 'action'
+              = link_to image_tag('buttons/edit.png'), edit_admin_download_path(admin_download), class: 'action'
+              = link_to image_tag('buttons/del.png'), admin_download, class: 'action', method: 'delete', data: {confirm: t(:are_you_sure)}
+      = paginate @admin_downloads
+    .footer_line

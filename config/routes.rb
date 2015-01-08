@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  namespace :admin do
+    resources :downloads
+  end
+
   get 'laws' => 'laws#index', as: :laws
 
   get 'knowledges' => 'knowledges#index', as: :knowledges

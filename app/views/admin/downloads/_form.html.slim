@@ -1,0 +1,33 @@
+= bootstrap_form_for @admin_download, html: { multipart: true }, layout: :horizontal do |f|
+  = f.select :category, ['宣導文宣','宣導短片','簡報資料','相關表單','其他']
+  = f.text_field :title
+  = f.form_group :download_type, label: { text: '下載方式' } do
+    = f.radio_button :download_type, 0, label: '上傳檔案', checked: true
+    = f.radio_button :download_type, 1, label: '外部連結'
+  .upload_type
+    = f.file_field :upload
+  .outside_type
+    = f.text_field :url_file_size
+    = f.select :url_file_size_unit, ['B','KB','MB','GB','TB']
+    = f.text_field :url
+  = f.form_group do
+    = f.primary t(:submit)
+javascript:
+  $(window).load(function() {
+    $('.outside_type').hide();
+    $('.upload_type').hide();
+    if ($('#admin_download_download_type_0').is(':checked')) {
+      $('.upload_type').show();
+    }
+    if ($('#admin_download_download_type_1').is(':checked')) {
+      $('.outside_type').show();
+    }
+  });
+  $('#admin_download_download_type_0').click(function() {
+    $('.upload_type').show();
+    $('.outside_type').hide();
+  });
+  $('#admin_download_download_type_1').click(function() {
+    $('.upload_type').hide();
+    $('.outside_type').show();
+  });
