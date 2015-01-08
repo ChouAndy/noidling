@@ -1,0 +1,29 @@
+= render 'shared/good_sites'
+.content
+  .downloads
+    .title
+    .inner
+      - if @downloads.empty?
+        .center 目前尚無任何相關法規
+      - else
+        table
+          tr
+            th width="80" 類別
+            th 描述
+            th width="60" 格式
+            th width="100" 檔案大小
+            th width="70" 下載
+          - @downloads.each do |download|
+            tr
+              td = download.category
+              td = download.title
+              - if download.download_type == 0
+                td = download.upload_file_name.split('.').last
+                td = number_to_human_size(download.upload_file_size)
+                td = link_to image_tag('icons/download_16.png'), download.upload.url, target: '_blank'
+              - else
+                td = download.url_file_name.split('.').last
+                td = "#{download.url_file_size} #{download.url_file_size_unit}"
+                td = link_to image_tag('icons/download_16.png'), download.url, target: '_blank'
+        = paginate @downloads
+    .footer_line

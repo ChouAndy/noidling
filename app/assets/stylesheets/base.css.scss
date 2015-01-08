@@ -364,6 +364,15 @@ footer {
 .laws .inner .list img { vertical-align:-4px; }
 .laws .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
 
+/* data */
+.downloads { margin-top:5px; }
+.downloads .title { height:37px; margin-bottom:10px; background:image_url('titles/downloads_title.png') no-repeat; background-position:center top; }
+.downloads .inner { min-height:30px; padding:0 0 8px 0; color:#666666; }
+.downloads .inner img { border:1px solid #fff; }
+.downloads .inner img:hover { border:1px solid red; }
+.downloads .inner td { text-align: center; }
+.downloads .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
 /* news */
 .admin .news_list { margin-top:5px; }
 .admin .news_list .title { height:37px; margin-bottom:5px; background:image_url('titles/news_list_title.png') no-repeat; background-position:center top; }

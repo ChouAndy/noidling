@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-
-
-  namespace :admin do
-    resources :downloads
-  end
+  get 'downloads' => 'downloads#index', as: :downloads
 
   get 'laws' => 'laws#index', as: :laws
 
@@ -17,6 +13,7 @@ Rails.application.routes.draw do
     resources :news
     resources :knowledges
     resources :laws
+    resources :downloads
     resources :counters, only: [:index, :edit, :update]
   end
 
