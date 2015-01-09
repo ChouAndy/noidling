@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     resources :knowledges
     resources :laws
     resources :downloads
+    resources :activities do
+      resources :pics, only: [:index, :new, :create, :destroy]
+    end
     resources :marquees
     resources :counters, only: [:index, :edit, :update]
   end

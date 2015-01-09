@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150108091845) do
+ActiveRecord::Schema.define(version: 20150109065437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admin_activities", force: :cascade do |t|
+    t.string   "name"
+    t.string   "subject"
+    t.string   "sponsor"
+    t.string   "cosponsor"
+    t.date     "hold_date"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.string   "site"
+    t.text     "achievement"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "admin_counters", force: :cascade do |t|
     t.integer  "category"
@@ -71,6 +85,18 @@ ActiveRecord::Schema.define(version: 20150108091845) do
     t.datetime "updated_at",              null: false
   end
 
+  create_table "admin_pics", force: :cascade do |t|
+    t.integer  "admin_activity_id"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "admin_pics", ["admin_activity_id"], name: "index_admin_pics_on_admin_activity_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "username",         null: false
     t.string   "crypted_password", null: false
@@ -81,4 +107,5 @@ ActiveRecord::Schema.define(version: 20150108091845) do
 
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
+  add_foreign_key "admin_pics", "admin_activities"
 end

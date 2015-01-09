@@ -1,0 +1,4 @@
+= bootstrap_form_for @admin_pic, url: admin_activity_pics_path, html: { multipart: true }, layout: :horizontal do |f|
+  = f.file_field :pic
+  = f.form_group do
+    = f.primary t(:submit)

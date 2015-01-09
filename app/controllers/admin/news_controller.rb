@@ -3,7 +3,7 @@ class Admin::NewsController < ApplicationController
   before_action :set_admin_news, only: [:show, :edit, :update, :destroy]
 
   def index
-    @admin_news = Admin::News.order('public_date DESC').page(params[:page]).per(5)
+    @admin_news = Admin::News.order('public_date DESC').page(params[:page]).per(10)
   end
 
   def show

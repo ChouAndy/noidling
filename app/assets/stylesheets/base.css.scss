@@ -492,6 +492,50 @@ footer {
 .admin .downloads_edit .inner { padding-top: 20px; }
 .admin .downloads_edit .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
 
+/* activities */
+.admin .activities_list { margin-top:5px; }
+.admin .activities_list .title { height:37px; margin-bottom:5px; background:image_url('titles/activities_list_title.png') no-repeat; background-position:center top; }
+.admin .activities_list .inner { min-height:30px; padding:0 0 8px 0; color:#666666; }
+.admin .activities_list .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .activities_view { margin-top:5px; }
+.admin .activities_view .title { height:37px; margin-bottom:5px; background:image_url('titles/activities_view_title.png') no-repeat; background-position:center top; }
+.admin .activities_view .inner { min-height:30px; padding:0 0 8px 0; color:#666666; position:relative; }
+.admin .activities_view .inner .view { margin:15px 0; padding:0 15px; width:780px; text-align:left; }
+.admin .activities_view .inner .view div { margin-bottom:18px; color:#666666; }
+.admin .activities_view .inner .view span { color:#028CB8; }
+.admin .activities_view .inner .view pre { width:100%; white-space:pre-wrap; }
+.admin .activities_view .inner .view .name { width:300px; text-indent: -70px; padding-left: 70px; }
+.admin .activities_view .inner .view .achievement { width:670px; text-indent: -70px; padding-left: 70px; text-align: justify; }
+.admin .activities_view .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .activities_add { margin-top:5px; }
+.admin .activities_add .title { height:37px; margin-bottom:5px; background:image_url('titles/activities_add_title.png') no-repeat; background-position:center top; }
+.admin .activities_add .inner { padding-top: 20px; }
+.admin .activities_add .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .activities_edit { margin-top:5px; }
+.admin .activities_edit .title { height:37px; margin-bottom:5px; background:image_url('titles/activities_edit_title.png') no-repeat; background-position:center top; }
+.admin .activities_edit .inner { padding-top: 20px; }
+.admin .activities_edit .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .activities_pics { margin-top:5px; }
+.admin .activities_pics .title { height:37px; margin-bottom:15px; background:image_url('titles/activities_pics_title.png') no-repeat; background-position:center top; }
+.admin .activities_pics .inner { }
+.admin .activities_pics .inner div { margin:10px 0; color:#666666; }
+.admin .activities_pics .inner .view label { color:#028CB8; }
+.admin .activities_pics .list { padding:0 15px; width:780px; }
+.admin .activities_pics .list .pic { text-align: center; float: left; }
+.admin .activities_pics .list .pic .pic_bg { margin: 0; width:250px; height:200px; background:image_url('html/pic_bg.png') no-repeat; }
+.admin .activities_pics .list .pic .pic_bg img { margin-top: 25px; border: 1px solid #ddd; }
+.admin .activities_pics .list .pic .del_pic { margin: 0; }
+.admin .activities_pics .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
+.admin .activities_pics_add { margin-top:5px; }
+.admin .activities_pics_add .title { height:37px; margin-bottom:5px; background:image_url('titles/activities_pics_title.png') no-repeat; background-position:center top; }
+.admin .activities_pics_add .inner { padding-top: 20px; }
+.admin .activities_pics_add .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
+
 /* scrollers */
 .admin .marquees_list { margin-top:5px; }
 .admin .marquees_list .title { height:37px; margin-bottom:5px; background:image_url('titles/scrollers_list_title.png') no-repeat; background-position:center top; }
@@ -501,7 +545,7 @@ footer {
 .admin .marquees_view { margin-top:5px; }
 .admin .marquees_view .title { height:37px; margin-bottom:5px; background:image_url('titles/scrollers_view_title.png') no-repeat; background-position:center top; }
 .admin .marquees_view .inner { min-height:30px; margin-top: 20px; }
-.admin .marquees_view .view { margin:15px 0; padding:0 15px; width:750px; }
+.admin .marquees_view .view { margin:15px 0; padding:0 15px; width:780px; }
 .admin .marquees_view .view div { margin:10px 0; color:#666666; }
 .admin .marquees_view .view label { color:#028CB8; }
 .admin .marquees_view .view a { font-weight:normal; color:blue; }

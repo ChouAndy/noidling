@@ -3,7 +3,7 @@ class Admin::DownloadsController < ApplicationController
   before_action :set_admin_download, only: [:show, :edit, :update, :destroy]
 
   def index
-    @admin_downloads = Admin::Download.page(params[:page]).per(5)
+    @admin_downloads = Admin::Download.page(params[:page]).per(10)
   end
 
   def show

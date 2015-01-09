@@ -3,7 +3,7 @@ class Admin::LawsController < ApplicationController
   before_action :set_admin_law, only: [:show, :edit, :update, :destroy]
 
   def index
-    @admin_laws = Admin::Law.page(params[:page]).per(5)
+    @admin_laws = Admin::Law.page(params[:page]).per(10)
   end
 
   def show

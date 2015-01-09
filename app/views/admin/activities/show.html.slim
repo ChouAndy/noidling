@@ -1,0 +1,49 @@
+= render 'shared/admin_menus'
+.admin
+  .activities_view
+    .title.text-right
+      = link_to image_tag('buttons/upload_pic.png'), admin_activity_pics_path(@admin_activity) , class: 'button'
+    .inner
+      .view
+        .name
+          span 活動名稱：
+          = @admin_activity.name
+        div
+          span 活動主題：
+          = @admin_activity.subject
+        div
+          span 主辦單位：
+          = @admin_activity.sponsor
+        div
+          span 協辦單位：
+          = @admin_activity.cosponsor
+        div
+          span 活動日期：
+          = @admin_activity.hold_date
+        div
+          span 活動地點：
+          = @admin_activity.site
+        .achievement
+          span 活動成果：
+          = @admin_activity.achievement
+        - unless @admin_activity.pics.empty?
+          #slides
+            .slides_container
+              - @admin_activity.pics.each do |pic|
+                = link_to image_tag(pic.pic.url(:thumb), width: '240px', height: '180px'), pic.pic.url, target: '_blank'
+            a href="#" class="prev"
+              = image_tag 'slides/arrow-prev.png', width: '24px', height: '43px', alt: 'Arrow Prev'
+            a href="#" class="next"
+              = image_tag 'slides/arrow-next.png', width: '24px', height: '43px', alt: 'Arrow Next'
+          = image_tag 'slides/frame_bg.png', id: 'frame'
+      javascript:
+        $(function(){
+          $('#slides').slides({
+            preload: true,
+            preloadImage: "#{image_path('slides/loading.gif')}",
+            play: 5000,
+            pause: 2500,
+            hoverPause: true
+          });
+        });
+    .footer_line

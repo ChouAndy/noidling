@@ -3,7 +3,7 @@ class Admin::KnowledgesController < ApplicationController
   before_action :set_admin_knowledge, only: [:show, :edit, :update, :destroy]
 
   def index
-    @admin_knowledges = Admin::Knowledge.page(params[:page]).per(5)
+    @admin_knowledges = Admin::Knowledge.page(params[:page]).per(10)
   end
 
   def show

@@ -1,0 +1,12 @@
+= bootstrap_form_for @admin_activity, layout: :horizontal do |f|
+  = f.text_field :name
+  = f.text_field :subject
+  = f.text_field :sponsor
+  = f.text_field :cosponsor
+  = f.date_select :hold_date
+  = f.time_select :start_time, { minute_step: 10 }
+  = f.time_select :end_time, { minute_step: 10 }
+  = f.text_field :site
+  = f.text_area :achievement, rows: '7'
+  = f.form_group do
+    = f.primary t(:submit)

@@ -25,3 +25,15 @@ zh-TW:
         url_file_size_unit: '大小單位'
       admin_marquee:
         text: '跑馬燈內容'
+      admin_activity:
+        name: '活動名稱'
+        subject: '活動主題'
+        sponsor: '主辦單位'
+        cosponsor: '協辦單位'
+        hold_date: '活動日期'
+        start_time: '開始時間'
+        end_time: '結束時間'
+        site: '活動地點'
+        achievement: '活動成果'
+      admin_pic:
+        pic: '活動照片'

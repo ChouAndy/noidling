@@ -1,0 +1,24 @@
+= render 'shared/admin_menus'
+.admin
+  .activities_list
+    .title.text-right
+      = link_to image_tag('buttons/add.png'), new_admin_activity_path , class: 'button'
+    .inner
+      table
+        tr
+          th 活動名稱
+          th width="100" 活動日期
+          th width="180" 活動地點
+          th width="40" 照片
+          th width="70" 功能
+        - @admin_activities.each do |admin_activity|
+          tr
+            td = admin_activity.name.truncate(28)
+            td = admin_activity.hold_date
+            td = admin_activity.site.truncate(14)
+            td = link_to image_tag('buttons/pics.png'), admin_activity_pics_path(admin_activity), class: 'action'
+            td
+              = link_to image_tag('buttons/view.png'), admin_activity, class: 'action'
+              = link_to image_tag('buttons/edit.png'), edit_admin_activity_path(admin_activity), class: 'action'
+              = link_to image_tag('buttons/del.png'), admin_activity, class: 'action', method: 'delete', data: {confirm: t(:are_you_sure)}
+    .footer_line

@@ -1,0 +1,21 @@
+= render 'shared/admin_menus'
+.admin
+  .activities_pics
+    .title.text-right
+      = link_to image_tag('buttons/upload_pic.png'), new_admin_activity_pic_path , class: 'button'
+    .inner
+      .view
+        div
+          label 活動日期：
+          = @admin_activity.hold_date
+        div
+          label 活動名稱：
+          = @admin_activity.name
+      .list.clearfix
+        - @admin_pics.each do |admin_pic|
+          .pic
+            .pic_bg
+              = link_to image_tag(admin_pic.pic.url(:thumb), width: '200px', height: '150px'), admin_pic.pic.url, target: '_blank'
+            .del_pic
+              = link_to image_tag('buttons/del_text.png'), admin_activity_pic_path(@admin_activity, admin_pic), class: 'action', method: 'delete', data: {confirm: t(:are_you_sure)}
+    .footer_line
