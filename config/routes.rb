@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get 'activities' => 'activities#index', as: :activities
+  get 'activities/:id' => 'activities#show', as: :activity
+
   get 'downloads' => 'downloads#index', as: :downloads
 
   get 'laws' => 'laws#index', as: :laws
