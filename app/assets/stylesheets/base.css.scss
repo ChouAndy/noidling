@@ -376,7 +376,7 @@ footer {
 .activities .inner .view { margin:15px 0; text-align:left; padding:0 15px; width:750px; }
 .activities .inner .view div { margin-bottom:13px; color:#666666; }
 .activities .inner .view .name { width:300px; text-indent: -70px; padding-left: 70px; }
-.activities .inner .view .achievement { width:670px; text-indent: -70px; padding-left: 70px; text-align: justify; }
+.activities .inner .view .achievement { text-align: justify; }
 
 .activities .inner .view span { color:#028CB8; }
 .activities .inner .view pre { width:100%; white-space:pre-wrap; }
@@ -520,7 +520,7 @@ footer {
 .admin .activities_view .inner .view span { color:#028CB8; }
 .admin .activities_view .inner .view pre { width:100%; white-space:pre-wrap; }
 .admin .activities_view .inner .view .name { width:300px; text-indent: -70px; padding-left: 70px; }
-.admin .activities_view .inner .view .achievement { width:670px; text-indent: -70px; padding-left: 70px; text-align: justify; }
+.admin .activities_view .inner .view .achievement { text-align: justify; }
 .admin .activities_view .footer_line { height:10px; background:image_url('html/footer_line.png') no-repeat; background-position:center top; }
 
 .admin .activities_add { margin-top:5px; }

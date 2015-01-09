@@ -25,7 +25,7 @@
           = @admin_activity.site
         .achievement
           span 活動成果：
-          = @admin_activity.achievement
+          = markdown @admin_activity.achievement
         - unless @admin_activity.pics.empty?
           #slides
             .slides_container
